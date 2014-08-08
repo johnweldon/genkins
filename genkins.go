@@ -54,7 +54,7 @@ func (j Job) String() string {
 	return fmt.Sprintf("%8s : %s", state, j.Name)
 }
 
-var colorPrecedence map[Color]int = map[Color]int{
+var colorPrecedence = map[Color]int{
 	Red: 0, RedRunning: 1,
 	Blue: 10, BlueRunning: 11,
 }
