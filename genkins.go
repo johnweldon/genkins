@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"sort"
+	"time"
 )
 
 // Color represents the current build status
@@ -102,9 +103,22 @@ func (n *BaseNode) AllJobs() []Job {
 }
 
 // GetInfo reads the json api endpoint of a Jenkins server and returns
-// BaseNode information
-func GetInfo(url string) (BaseNode, error) {
-	r, err := http.Get(url)
+// BaseNode information. id and token are optional, and are only needed
+// for password protected sites.
+func GetInfo(url string, id string, token string) (BaseNode, error) {
+	client := &http.Client{Timeout: time.Second * 30}
+	request, err := http.NewRequest("GET", url, nil)
+	if err != nil {
+		return BaseNode{}, err
+	}
+	if id != "" {
+		if token == "" {
+			return BaseNode{}, fmt.Errorf("missing token for authentication")
+		}
+		request.SetBasicAuth(id, token)
+	}
+
+	r, err := client.Do(request)
 	if err != nil {
 		return BaseNode{}, err
 	}

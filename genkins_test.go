@@ -1,12 +1,13 @@
 package genkins_test
 
 import (
-	"github.com/johnweldon/genkins"
 	"testing"
+
+	"github.com/johnweldon/genkins"
 )
 
 func TestGetInfo(t *testing.T) {
-	node, err := genkins.GetInfo("https://ci.jenkins-ci.org/api/json")
+	node, err := genkins.GetInfo("https://ci.jenkins.io/api/json", "", "")
 	if err != nil {
 		t.Error(err)
 	}
