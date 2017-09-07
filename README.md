@@ -9,53 +9,53 @@ Default jenkins server is the server for jenkins itself, you can substitute your
 
 `genkins help`
 
-  NAME:
-     genkins - get jenkins updates
+    NAME:
+       genkins - get jenkins updates
 
-  USAGE:
-     genkins [global options] command [command options] [arguments...]
+    USAGE:
+       genkins [global options] command [command options] [arguments...]
 
-  VERSION:
-     0.0.0
+    VERSION:
+       0.0.0
 
-  COMMANDS:
-       all, a   show status of all jobs
-       bad, b   show bad jobs
-       help, h  Shows a list of commands or help for one command
+    COMMANDS:
+         all, a   show status of all jobs
+         bad, b   show bad jobs
+         help, h  Shows a list of commands or help for one command
 
-  GLOBAL OPTIONS:
-     --help, -h     show help
-     --version, -v  print the version
+    GLOBAL OPTIONS:
+       --help, -h     show help
+       --version, -v  print the version
 
 
 
 `genkins help all`
 
-  NAME:
-     genkins all - show status of all jobs
+    NAME:
+       genkins all - show status of all jobs
 
-  USAGE:
-     genkins all [command options] [arguments...]
+    USAGE:
+       genkins all [command options] [arguments...]
 
-  OPTIONS:
-     --url value, -u value    url for the jenkins server json api (default: "https://ci.jenkins.io/api/json") [$GENKINS_URL]
-     --full, -f               Show full build info [$GENKINS_FULL]
-     --id value, -i value     user id for the jenkins server json api [$GENKINS_ID]
-     --token value, -t value  user token for the jenkins server json api [$GENKINS_TOKEN]
+    OPTIONS:
+       --url value, -u value    url for the jenkins server json api (default: "https://ci.jenkins.io/api/json") [$GENKINS_URL]
+       --full, -f               Show full build info [$GENKINS_FULL]
+       --id value, -i value     user id for the jenkins server json api [$GENKINS_ID]
+       --token value, -t value  user token for the jenkins server json api [$GENKINS_TOKEN]
 
 
 
 `genkins help bad`
 
-  NAME:
-     genkins bad - show bad jobs
+    NAME:
+       genkins bad - show bad jobs
 
-  USAGE:
-     genkins bad [command options] [arguments...]
+    USAGE:
+       genkins bad [command options] [arguments...]
 
-  OPTIONS:
-     --url value, -u value    url for the jenkins server json api (default: "https://ci.jenkins.io/api/json") [$GENKINS_URL]
-     --full, -f               Show full build info [$GENKINS_FULL]
-     --id value, -i value     user id for the jenkins server json api [$GENKINS_ID]
-     --token value, -t value  user token for the jenkins server json api [$GENKINS_TOKEN]
+    OPTIONS:
+       --url value, -u value    url for the jenkins server json api (default: "https://ci.jenkins.io/api/json") [$GENKINS_URL]
+       --full, -f               Show full build info [$GENKINS_FULL]
+       --id value, -i value     user id for the jenkins server json api [$GENKINS_ID]
+       --token value, -t value  user token for the jenkins server json api [$GENKINS_TOKEN]
 
